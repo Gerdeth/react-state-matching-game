@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import OptionsPanel from '../OptionsPanel'
-import Board from '../Board'
+import Board from '../Board';
+import createTiles from '../../misc/utils';
 
 import './App.css';
 
@@ -25,10 +26,18 @@ class App extends Component{
       </header>
         <OptionsPanel data={this.state.playing, this.state.numTiles} />
         <Board data={this.state.tiles, this.state.numTiles} />
-      }
+      
     </div>
   );
 
+  }
+  startGame(numTiles){
+    this.setState((state)=>{
+      playing:true;
+      previousTileIndex: null;
+      toBeCleared:null;
+
+    })
   }
 }
 

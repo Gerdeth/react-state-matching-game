@@ -16,6 +16,7 @@ const TileSelector = () => {
    <div className='tileSelector'>
      <div>Number of Tiles</div>
      <div className='tileSelectorDropdown'>
+       {numTiles}
        {dropdown}
      </div>
    </div>
