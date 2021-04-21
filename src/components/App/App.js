@@ -17,6 +17,15 @@ class App extends Component{
 
     }
   }
+
+  handleTileClicked(id, color){
+    this.setState((state)=>{
+      const tiles= this.state.tiles
+      let toBeCleared= this.state.toBeCleared
+      toBeCleared:toBeCleared(state.toBeCleared)
+      tiles: tiles(state.tiles)
+    })
+  }
   startGame(numTiles){
     this.setState((state)=>({
       playing:true,
