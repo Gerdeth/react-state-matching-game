@@ -5,7 +5,9 @@ import './Tile.css'
 const Tile = (props) => {
   const dynamicColor=props.selected || props.matched ? {backgroundColor: props.color}:null
   return (
-    <div className='Tile'style ={dynamicColor}>
+    <div className='Tile'style ={dynamicColor} onClick={()=>{
+      handleTileClicked()
+    }}>
      { props.selected || props.matched ? <props.svg/>:null}
     </div>
   )
