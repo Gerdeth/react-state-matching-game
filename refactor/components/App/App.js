@@ -79,8 +79,9 @@ class App extends Component{
           <OptionsPanel playing={this.state.playing} numTiles={this.state.numTiles} startGame={this.startGame} handleNumTileChange={this.handleNumTileChange} />
           <Board tiles={this.state.tiles} numTiles={this.state.numTiles}  />
         </GameContext.Provider>
+        
       
-    <div/>
+    </ div>
   );
 
   }
